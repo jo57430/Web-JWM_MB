@@ -1,0 +1,94 @@
+/* !
+ * |==================================|
+ * |    Jo Windows Manager  ADDONS    |
+ * |==================================|
+ * |
+ * |     Ver : 1.0.0
+ * |    Date : 02/11/2024
+ * |      By : Jonathan BAUER (jbauer.fr)
+ * | Copyright 2024-2025 The JWM Author (Jonathan BAUER)
+ * | License : Apache 2.0 ()
+ * |
+ * |==================================
+ * This is the default CSS file used by the messageBox.
+*/
+
+/* The body of the message box */
+jwmmb_body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+    background-color: lightgrey;
+    border: 2px groove #EEE;
+}
+jwmmb_top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+}
+/* The big icon */
+jwmmb_icon {
+    display: block;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    min-width: 3vw;
+    min-height: 3vw;
+    margin: 1vh 1vw;
+}
+
+jwmmb_icon[aria-label="0"] { /* (No icon) */
+    background-image: "";
+}
+jwmmb_icon[aria-label="1"] { /* Stop-sign icon */
+    background-image: url("https://raw.githack.com/jo57430/Web-JWM_MB/refs/heads/master/lib/assets/icons/stop_sign.svg");
+}
+jwmmb_icon[aria-label="2"] { /* Question-mark icon */
+    background-image: url("https://raw.githack.com/jo57430/Web-JWM_MB/refs/heads/master/lib/assets/icons/question_mark.svg");
+}
+jwmmb_icon[aria-label="3"] { /* Exclamation-point icon */
+    background-image: url("https://raw.githack.com/jo57430/Web-JWM_MB/refs/heads/master/lib/assets/icons/exclamation_point.svg");
+}
+jwmmb_icon[aria-label="4"] { /* Information-sign icon */
+    background-image: url("https://raw.githack.com/jo57430/Web-JWM_MB/refs/heads/master/lib/assets/icons/information_sign.svg");
+}
+jwmmb_icon[aria-label="5"] { /* (Custom Icon) */
+    background-image: "";
+}
+
+/* The DOM where all the button is defind */
+jwmmb_control {
+    width: 90%;
+    margin: 1vh 5%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+/* Action button */
+jwmmb_control button {
+    padding: 0;
+    display: block;
+    width: 120px;
+}
+jwmmb_control button:active {
+    padding: 0;
+}
+jwmmb_control button:focus {
+    outline: none;
+}
+jwmmb_control button:disabled {
+    background-color: #acacac;
+    text-shadow: 1px 1px 0 #fff;
+    color: grey;
+}
