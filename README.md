@@ -1,4 +1,4 @@
-<img src="assets/logo_long.png" alt="Logo du script 'JWM-MB'" width="25%"/>
+<img src="docs/assets/logo_long.png" alt="Logo du script 'JWM-MB'" width="25%"/>
 
 # [J-BAUER][EN] Jo Windows Manager : MessageBox Add-on
 **J.W.M.-M.B.** is a add-on for **J.W.M.** that adds MessageBox functionality.</br>
