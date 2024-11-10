@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>[JWM]Demo - Simple Window</title>
+        <!-- 
+            This style is only used to enhance the appearance of this example page. 
+            It is not necessary for the operation of the script. 
+        -->
+        <link href="https://raw.githack.com/jo57430/Web-JWM/refs/heads/master/exemple/style.css" rel="stylesheet" />
+        <!-- 
+            This is where the script is included.
+        -->
+        <script src="https://raw.githack.com/jo57430/Web-JWM/refs/heads/master/lib/jwm_1-0-0.js"></script>  
+
+        <script src="https://raw.githack.com/jo57430/Web-JWM_MB/refs/heads/master/lib/jwm-mb_1-0-0.js"></script>
+        <link href="https://raw.githack.com/jo57430/Web-JWM_MB/refs/heads/master/lib/assets/jwm-mb_1-0-0.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Demo N*1 - A Simple MessageBox</h1>
+            <p>Welcome to the demo page for <strong>Jo Windows Manager</strong> script.</p>
+            <p>On this page you be able to create a simple messageBox using the button below, then be able to move and select a choice.</p>
+            <p>When you select a choice, you will receive alerts/logs corresponding to the selected choice.</p>
+            <a href="#" class="btn" onclick="onButtonPress()">Open a window !</a>
+        </div>
+        <footer class="footer">
+            &copy; 2024 Jo Windows Manager by Jonathan BAUER - All rights reserved.
+        </footer>
+    </body>
+
+    <!-- 
+        This is where the WindowManager is created and manage what the button do. 
+        For simplicity's sake, and because 'JWM_WindowManager' needs a valid DOM 'body' to function, the script is footer-based.
+        We recommend using the 'DOMContentLoaded' event to create 'JWM_WindowManager' properly.
+    -->
+    <script>
+        // First create an instance of the window manager, which will manage all windows created later.
+        const wm_WindowManager = JWM.newManager(); // new JWM_WindowManager() can be used, is the same.
+        let w_Window;
+
+        // This function is used to generate a random number between two value.
+        function intRand(int_a, int_b){
+            return Math.floor(Math.random() * (int_b - int_a + 1) + int_a);
+        }
+
+        // This function is called when the button is pressed.
+        // I'm using onclick instead of an DOM event for simplification and demonstration purposes.
+        async function onButtonPress(){
+
+            // check if a window already exist and if is valid(aka not removed/deconstructed), if yes stop here is not needed to create more than one window for this demo.
+            if( w_Window && w_Window.isValid())
+                return;
+
+            // Create the window.
+            w_Window = JWM.newMessagebox(intRand(0, 5), intRand(0, 6), "The title of the window", "dskjfdshjlf hjkhdsl hhdsklj hslfh jfdskl fjkhkljsdhf kjshlfhs khldshkdfsh shkjdsf hksdlj dskjfdshjlf hjkhdsl hhdsklj hslfh jfdskl fjkhkljsdhf kjshlfhs khldshkdfsh shkjdsf hksdlj dskjfdshjlf hjkhdsl hhdsklj hslfh jfdskl fjkhkljsdhf kjshlfhs khldshkdfsh shkjdsf hksdlj", {customIcon: 'url("https://raw.githack.com/jo57430/Web-JWM/refs/heads/master/lib/assets/icons/restore.svg")'})
+            w_Window.setCallback((int_id) => {
+                switch (int_id) {
+                    case 0:
+                        alert("Close");
+                        console.log("Close");
+                        break;
+                    case 1:
+                        alert("Ok");
+                        console.log("Ok");
+                        break;
+                    case 2:
+                        alert("Cancel");
+                        console.log("Cancel");
+                        break;
+                    case 3:
+                        alert("Abort");
+                        console.log("Abort");
+                        break;
+                    case 4:
+                        alert("Retry");
+                        console.log("Retry");
+                        break;
+                    case 5:
+                        alert("Ignore");
+                        console.log("Ignore");
+                        break;
+                    case 6:
+                        alert("Yes");
+                        console.log("Yes");
+                        break;
+                    case 7:
+                        alert("No");
+                        console.log("No");
+                        break;
+                    case 8:
+                        alert("Try Again");
+                        console.log("Try Again");
+                        break;
+                    case 9:
+                        alert("Continue");
+                        console.log("Continue");
+                        break;
+                
+                    default:
+                        alert("Undefind");
+                        console.log("Undefind");
+                        break;
+                }
+                console.log(int_id);
+            })
+
+        };
+    </script>
+</html>

@@ -73,8 +73,8 @@ Creates a new message box and returns the user’s selected choice.
   - `5`: Ignore
   - `6`: Yes
   - `7`: No
-  - `10`: Try Again
-  - `11`: Continue
+  - `8`: Try Again
+  - `9`: Continue
 
 ---
 
