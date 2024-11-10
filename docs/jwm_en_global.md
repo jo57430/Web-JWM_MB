@@ -38,7 +38,7 @@ Used to create a new message box.
 - `{JWM_Window}` - Returns the created message box window.
 
 
-### JWM.newMessagebox() (Async)
+### JWM.newMessageboxReponse() (Async)
 
 **Description:**  
 Creates a new message box and returns the user’s selected choice.
