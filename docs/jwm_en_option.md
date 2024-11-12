@@ -3,7 +3,7 @@
 # [J-BAUER][EN] Jo Windows Manager : MessageBox Add-on
 
 > **By Jonathan BAUER (J-BAUER)**</br>
-> Version: 1.0</br>
+> Version: 1.1.0</br>
 > Date: 10/11/2024
 
 

@@ -7,10 +7,10 @@ If needed, you can customize its behavior by setting various options.</br>
 (WARNING: for this script to work you need [**J.W.M.**](https://github.com/jo57430/Web-JWM/) !)
 
 > **By Jonathan BAUER (J-BAUER)**</br>
-> Version: 1.0.0</br>
-> Date: 10/11/2024</br>
+> Version: 1.1.0</br>
+> Date: 12/11/2024</br>
 > License: Apache 2.0</br>
-> Requirement: [**J.W.M.** Ver: 1.0.0](https://github.com/jo57430/Web-JWM/)
+> Requirement: [**J.W.M.** Ver: 1.1.0](https://github.com/jo57430/Web-JWM/)
 
 ## Demo
 <img src="docs/assets/jwm_demo.gif" alt="Demo gif where we see windows being manipulated." width="30%"/>
@@ -28,7 +28,7 @@ If needed, you can pass additional options to newMessagebox or newMessageboxResp
 ### Default method
 Installing J.W.M.-M.B. is straightforward. Simply add the following line in the `<head>` section of your page, after the J.W.M. JavaScript files:
 ```html
-<script src="https://raw.githack.com/jo57430/Web-JWM/refs/heads/master/lib/jwm_1-0-0.js"></script> <!-- <----- Add all the below line after this one !  -->
+<script src="https://raw.githack.com/jo57430/Web-JWM/refs/heads/master/lib/jwm_1-1-0.js"></script> <!-- <----- Add all the below line after this one !  -->
 
 <script src="https://raw.githack.com/jo57430/Web-JWM_MB/refs/heads/master/lib/jwm-mb_1-0-0.js"></script>
 <link href="https://raw.githack.com/jo57430/Web-JWM_MB/refs/heads/master/lib/assets/jwm-mb_1-0-0.css" rel="stylesheet"/>
